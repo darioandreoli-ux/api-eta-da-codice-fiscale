@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDate;
 
 public class CodiceFiscaleResponse {
-    private String codiceFiscale;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate dataNascita;
@@ -13,19 +12,11 @@ public class CodiceFiscaleResponse {
 
     public CodiceFiscaleResponse() {}
 
-    public CodiceFiscaleResponse(String codiceFiscale, LocalDate dataNascita, int eta) {
-        this.codiceFiscale = codiceFiscale;
+    public CodiceFiscaleResponse(LocalDate dataNascita, int eta) {
         this.dataNascita = dataNascita;
         this.eta = eta;
     }
 
-    public String getCodiceFiscale() {
-        return codiceFiscale;
-    }
-
-    public void setCodiceFiscale(String codiceFiscale) {
-        this.codiceFiscale = codiceFiscale;
-    }
 
     public LocalDate getDataNascita() {
         return dataNascita;

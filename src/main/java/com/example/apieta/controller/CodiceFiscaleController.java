@@ -28,7 +28,7 @@ public class CodiceFiscaleController {
         try {
             LocalDate data = service.estraiDataNascita(cf);
             int eta = service.calcolaEta(data);
-            var resp = new CodiceFiscaleResponse(cf.toUpperCase(), data, eta);
+            var resp = new CodiceFiscaleResponse(data, eta);
             return ResponseEntity.ok(resp);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(java.util.Map.of("error", e.getMessage()));
