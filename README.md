@@ -1,7 +1,5 @@
 # api-eta-da-codice-fiscale
 
-Progetto Spring Boot (Java 17, Maven) che espone un endpoint REST per ricavare la data di nascita e l'età a partire da un codice fiscale italiano.
-
 ## Endpoint
 
 GET /api/codice-fiscale/{cf}
