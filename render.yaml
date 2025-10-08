@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: api-eta-da-codice-fiscale
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
